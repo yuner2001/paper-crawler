@@ -2,6 +2,6 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Item():
+class PaperItem():
     title: str
     url: str

@@ -1,5 +1,4 @@
-from base import BaseCrawler
-
+from cvpr-crawler import
 type = {
     'example': ExampleCrawler,
 }

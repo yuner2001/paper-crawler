@@ -13,8 +13,8 @@ class BaseCrawler(object):
         self._start = start
         self._end = end
         self.data = list()
-        driver = webdriver.Firefox()
-        driver.get(self.url)
+        self.driver = webdriver.Firefox()
+        self.driver.get(self.url)
         craw_logger.info(f'{self.name}-crawler initialized!')
         craw_logger.info(f'total item:{self.end - self.start}.')
 
@@ -26,7 +26,6 @@ class BaseCrawler(object):
     def end(self):
         return self._end
 
-    @
     def craw_a_step(self, idx, *args):
         '''
             here to put your own crwaler logic
